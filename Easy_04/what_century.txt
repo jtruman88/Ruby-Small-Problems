@@ -1,0 +1,29 @@
+- Define a method that takes an integer as an argument
+    -Define a second method that will validate the input greater than 0
+  - SET variable century = Convert the integer into a string for more flexibility
+  - Check if the length is 1 or 2
+    -if true RETURN 1st century
+  - IF century.to_i > (century / 100) * 100 
+    - century = (century.to_i / 100 + 1).to_s
+    - ELSE century = (century.to_i / 100).to_s
+  - IF  century[-1] == '0' || (century[-1] >= '4' && century[-1].to_i <= '9')
+    - century += 'th'
+  = ELSIF century[-2..-1] is between 11 and 13
+    - century += 'th'
+  -ELSE
+    - IF century ends in 1
+      - century += 'st'
+    - ELSIF century ends in 2
+      - century += 'nd'
+    - ELSE
+      - century += 'rd'
+  RETURN century
+  
+
+
+  
+CENTURY ENDINGS
+'st' = ends in 1 except 11
+'nd' = ends in 2 except 12
+'rd' = ends in 3 except 13
+'th' = ends in 4, 5, 6, 7, 8, 9, 0

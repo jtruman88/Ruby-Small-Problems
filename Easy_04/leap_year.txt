@@ -1,0 +1,10 @@
+- Define a method that will validate an integer greater than 0
+- Define the leap year method with 1 parameter, year
+  - If year is divisible by 4
+    - If year is divisible by 100 and NOT divisible by 400
+      - false
+    - ELSE 
+      - true
+  - ELSE
+    - False
+    

@@ -1,0 +1,42 @@
+- define method, merge_sort, 1 para, list
+  - Need to recursively take the array, divide the elements by two, split them in to two sub arrays, nested within the original array. Keep doing this until each value is within its own array. Once the array passed into the merge recursion only has one value, it can be returned.
+    return list if list.length == 1
+    half = list.length / 2 - 1
+    list = [merge(list[0..half])] + [merge(list[half + 1..-1])]
+  - After they are seperated, pass each of the two subarrays into the merge method.
+  
+  - temp = []
+  - map each element in the list into its own array. 
+  - while list.length > 2
+  index = 0
+  loop do
+  - then we will 'merge' every two elements together into another array and add them to temp, if list.length is odd, 'merge' the last two elemarrays together, then 'merge' the third to last with that new array, add to temp.
+  - index += 1
+  - if index equals n
+  end
+  - list = temp
+  - temp = []
+  -
+  
+  
+  
+  
+  
+  
+    list1 = list[0..half]
+  
+  if list1.length > 1
+    half1 = list1.length / 2 - 1
+    list1 = [list1[0..half1]] + [list1[half1 + 1..-1]]
+    list1 = merge(list1[0], list1[1])
+  end
+
+  list2 = list[half + 1..-1]
+
+  if list2.length > 1
+    half2 = list2.length / 2 - 1
+    list2 = [list2[0..half2]] + [list2[half2 + 1..-1]]
+    list2 = merge(list2[0], list2[1])
+  end
+  list = merge(list1, list2)
+  p list

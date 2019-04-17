@@ -1,0 +1,7 @@
+- Define method, multisum, with a single parameter, max
+- Set variable total = 0
+ - Loop to check each number in a range from 1 to max
+  - if num is divisble by 3 or by 5
+    - total += num
+- Return total
+  
